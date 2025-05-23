@@ -6,6 +6,15 @@
 </head>
 <body>
   <h1>Welcome!</h1>
-  <p>Q&A Form will be here.</p>
+  <form action="/ask" method="post">
+    <label for="question">Your Question:</label><br>
+    <textarea id="question" name="question" rows="4" cols="50"></textarea><br><br>
+    <button type="submit">Send</button>
+  </form>
+
+  {% if answer %}
+    <h2>Answer:</h2>
+    <p>{{ answer }}</p>
+  {% endif %}
 </body>
 </html>
